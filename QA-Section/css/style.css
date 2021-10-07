@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/*sassの共通css*/
+/*基本共通のCSS*/
+body {
+  color: #333;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #082b48;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.clear::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+@media screen and (max-width: 767px) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .is-sp {
+    display: none;
+  }
+}
+
+/* 
+--------------------------------------------------------------*/
+.qa__item-list {
+  margin: 80px auto 0;
+  width: 901px;
+  max-width: 100%;
+}
+
+.qa__item {
+  border: 1px solid #3F51B5;
+}
+
+.qa__item:not(:nth-of-type(1)) {
+  margin-top: 24px;
+}
+
+.qa-box__q {
+  padding: 12px 56px;
+  color: #fff;
+  background: #3F51B5;
+  font-weight: bold;
+  position: relative;
+}
+
+.qa-box__q::before {
+  content: "Q";
+  position: absolute;
+  top: 12px;
+  left: 20px;
+}
+
+.qa-box__icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 14px;
+}
+
+.qa-box__icon.is-open .qa-box__bar2 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.qa-box__bar1 {
+  width: 14px;
+  height: 2px;
+  background: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+
+.qa-box__bar2 {
+  width: 2px;
+  height: 14px;
+  background: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.qa-box__a {
+  background: #fff;
+  font-weight: bold;
+  color: #3F51B5;
+  line-height: 1.5;
+  padding: 16px 30px 16px 20px;
+  position: relative;
+  display: none;
+}
+
+.qa-box__content {
+  position: relative;
+  padding-left: 35px;
+  font-weight: bold;
+}
+
+.qa-box__content::before {
+  content: "A";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
